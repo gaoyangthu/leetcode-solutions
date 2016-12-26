@@ -21,13 +21,10 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        l = len(s)
-        if l == 0:
-            return 0
         max_len = 0
         head = 0
         i = 0
-        while i < l:
+        while i < len(s):
             j = s[head:i].find(s[i])
             if j > -1:
                 max_len = max(max_len, i - head)
